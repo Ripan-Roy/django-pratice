@@ -6,6 +6,11 @@ def homePage(request):
     data = {
         'title': 'Home Page',
         'bdata': 'This is the body data',
+        'clist': ['Python', 'Java', 'C++', 'C#', 'PHP', 'JavaScript', 'Ruby', 'Go', 'Swift', 'Kotlin'],
+        'student_details' : [
+            {'name':'Ripan', 'age': 20, 'city':'Kolkata'},
+            {'name':'Rahul', 'age': 21, 'city':'Delhi'}
+        ]
     }
     return render(request, "index.html", data)
 

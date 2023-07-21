@@ -20,6 +20,26 @@
       </p>
     <![endif]-->
     <h1>{{bdata}}</h1>
+    {% for n in clist %}
+    <h2>{{n}}</h2>
+    {% endfor %}
+
+    <br />
+    <br />
+    <table border="2" cellpadding="15">
+      <tr>
+        <th>name</th>
+        <th>age</th>
+        <th>city</th>
+      </tr>
+        {% for n in student_details %}
+        <tr>
+            <td>{{n.name}}</td>
+            <td>{{n.age}}</td>
+            <td>{{n.city}}</td>
+        </tr>
+        {% endfor %}
+    </table>
   </body>
   <script src="" async defer></script>
 </html>
