@@ -19,10 +19,10 @@
         <a href="#">upgrade your browser</a> to improve your experience.
       </p>
     <![endif]-->
-    <h1>{{bdata}}</h1>
+    {% comment %} <h1>{{bdata}}</h1>
     {% for n in clist %}
     <h2>{{n}}</h2>
-    {% endfor %}
+    {% endfor %} {% endcomment %}
 
     <br />
     <br />
@@ -35,7 +35,11 @@
         {% for n in student_details %}
         <tr>
             <td>{{n.name}}</td>
-            <td>{{n.age}}</td>
+            {% if n.age > 20 %}
+                <td>{{n.age}}</td>
+            {% else %}
+                <td>NA</td>
+            {% endif %}
             <td>{{n.city}}</td>
         </tr>
         {% endfor %}
